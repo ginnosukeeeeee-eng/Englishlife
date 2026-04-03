@@ -1,0 +1,1374 @@
+<!DOCTYPE html>
+<!-- saved from url=(0057)file:///Users/user/Downloads/aki-english-lp.html#services -->
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AKI English Life | 親子で育てる・英語の音</title>
+<link href="./AKI English Life _ 親子で育てる・英語の音_files/css2" rel="stylesheet">
+<style>
+:root {
+  --cream: #FDF8F2;
+  --sand: #F0E6D3;
+  --warm: #E8D5B7;
+  --terracotta: #C97B4B;
+  --rust: #A85630;
+  --deep: #2C1810;
+  --forest: #3D5A3E;
+  --sage: #7A9E7E;
+  --mist: #B8CEB9;
+  --gold: #D4A843;
+  --text: #2C1810;
+  --text-mid: #6B4C35;
+  --text-light: #9E7E65;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', 'Noto Serif JP', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+/* ── NOISE TEXTURE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(253, 248, 242, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--warm);
+}
+
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.15rem;
+  color: var(--rust);
+  letter-spacing: 0.04em;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover { color: var(--terracotta); }
+
+.nav-cta {
+  background: var(--terracotta);
+  color: white !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  font-size: 0.8rem !important;
+  transition: background 0.2s !important;
+}
+
+.nav-cta:hover { background: var(--rust) !important; color: white !important; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 7rem 4rem 4rem;
+  position: relative;
+  overflow: hidden;
+  gap: 3rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  right: -10%;
+  top: -5%;
+  width: 65%;
+  height: 110%;
+  background: radial-gradient(ellipse at 60% 40%, var(--sand) 0%, var(--warm) 50%, transparent 80%);
+  border-radius: 40% 60% 60% 40% / 50% 40% 60% 50%;
+  z-index: 0;
+}
+
+.hero-text { position: relative; z-index: 2; }
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.hero-eyebrow::before {
+  content: '';
+  width: 2rem;
+  height: 1px;
+  background: var(--terracotta);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 1.15;
+  color: var(--deep);
+  margin-bottom: 1rem;
+}
+
+.hero h1 em {
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.hero-sub {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.05rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 2rem;
+  background: var(--sand);
+  color: var(--text-mid);
+  border: 1px solid var(--warm);
+  font-weight: 500;
+}
+
+.hero-cta-group {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--terracotta);
+  color: white;
+  padding: 0.9rem 2.2rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  transition: all 0.25s;
+  box-shadow: 0 4px 20px rgba(201,123,75,0.35);
+}
+
+.btn-primary:hover {
+  background: var(--rust);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(201,123,75,0.4);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-mid);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  border-bottom: 1px solid var(--warm);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.btn-secondary:hover { color: var(--terracotta); border-color: var(--terracotta); }
+
+.hero-visual {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 8px 40px rgba(44,24,16,0.1);
+  width: 100%;
+  max-width: 380px;
+  border: 1px solid var(--warm);
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.hero-card-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.profile-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--terracotta), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--deep);
+}
+
+.profile-info p {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  margin-top: 2px;
+}
+
+.hero-card-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.stat {
+  text-align: center;
+  padding: 0.6rem;
+  background: var(--cream);
+  border-radius: 0.75rem;
+}
+
+.stat-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem;
+  color: var(--terracotta);
+  font-weight: 700;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.65rem;
+  color: var(--text-light);
+  margin-top: 2px;
+  display: block;
+  line-height: 1.4;
+}
+
+.hero-floating-tag {
+  position: absolute;
+  background: var(--forest);
+  color: white;
+  padding: 0.55rem 1rem;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  animation: floatTag 4s ease-in-out infinite 1s;
+}
+
+.tag-1 { top: 5%; right: -8%; }
+.tag-2 { bottom: 10%; left: -10%; animation-delay: 2s; }
+
+@keyframes floatTag {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-6px) rotate(2deg); }
+}
+
+/* ── PAIN SECTION ── */
+.pain {
+  padding: 6rem 4rem;
+  background: var(--deep);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.pain::before {
+  content: '"';
+  position: absolute;
+  font-family: 'Playfair Display', serif;
+  font-size: 30rem;
+  color: rgba(255,255,255,0.03);
+  top: -8rem;
+  left: -2rem;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.pain-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.section-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-label::after {
+  content: '';
+  flex: 1;
+  max-width: 3rem;
+  height: 1px;
+  background: var(--terracotta);
+}
+
+.pain h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.3;
+  margin-bottom: 3rem;
+  color: white;
+}
+
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.pain-item {
+  padding: 1.75rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 1rem;
+  position: relative;
+  transition: border-color 0.3s, background 0.3s;
+}
+
+.pain-item:hover {
+  border-color: rgba(201,123,75,0.5);
+  background: rgba(201,123,75,0.05);
+}
+
+.pain-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: rgba(255,255,255,0.06);
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.pain-item p {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.95rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+.pain-item p strong {
+  color: white;
+  font-weight: 600;
+}
+
+.pain-answer {
+  margin-top: 3rem;
+  padding: 2rem 2.5rem;
+  background: var(--terracotta);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pain-answer-icon { font-size: 2rem; flex-shrink: 0; }
+
+.pain-answer p {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 1.05rem;
+  color: white;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.pain-answer p strong { font-weight: 600; }
+
+/* ── ABOUT SECTION ── */
+.about {
+  padding: 7rem 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-visual {
+  position: relative;
+}
+
+.about-card-main {
+  background: var(--sand);
+  border-radius: 2rem;
+  padding: 2.5rem;
+  border: 1px solid var(--warm);
+}
+
+.about-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: var(--deep);
+  margin-bottom: 0.3rem;
+}
+
+.about-title {
+  font-size: 0.85rem;
+  color: var(--terracotta);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  margin-bottom: 1.5rem;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-tag {
+  font-size: 0.72rem;
+  padding: 0.3rem 0.75rem;
+  background: white;
+  border-radius: 2rem;
+  color: var(--text-mid);
+  border: 1px solid var(--warm);
+}
+
+.about-quote {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  font-weight: 300;
+  border-left: 2px solid var(--terracotta);
+  padding-left: 1rem;
+}
+
+.about-float {
+  position: absolute;
+  bottom: -1.5rem;
+  right: -1.5rem;
+  background: var(--forest);
+  color: white;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  font-size: 0.85rem;
+  text-align: center;
+  line-height: 1.6;
+  box-shadow: 0 8px 30px rgba(44,24,16,0.2);
+}
+
+.about-float strong {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: var(--mist);
+}
+
+.about-text .section-label { color: var(--terracotta); }
+.about-text .section-label::after { background: var(--terracotta); }
+
+.about-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: var(--deep);
+  line-height: 1.35;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.92rem;
+  color: var(--text-mid);
+  line-height: 2;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+/* ── SERVICES SECTION ── */
+.services {
+  padding: 7rem 4rem;
+  background: var(--sand);
+}
+
+.services-header {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto 4rem;
+}
+
+.services-header .section-label {
+  justify-content: center;
+  color: var(--terracotta);
+}
+
+.services-header .section-label::after { display: none; }
+
+.services-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: var(--deep);
+  line-height: 1.3;
+  margin-bottom: 1rem;
+}
+
+.services-header p {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.9rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: white;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--warm);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(44,24,16,0.12);
+}
+
+.service-card.featured {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.service-card-top {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
+}
+
+.service-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.service-tag {
+  display: inline-block;
+  font-size: 0.65rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 2rem;
+  background: var(--cream);
+  color: var(--text-mid);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  font-weight: 500;
+}
+
+.service-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.25rem;
+  color: var(--deep);
+  line-height: 1.3;
+  margin-bottom: 0.6rem;
+}
+
+.service-card p {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.service-card-accent {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.service-points {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.service-points li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+.service-points li::before {
+  content: '✓';
+  color: var(--forest);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  color: var(--terracotta);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 1rem;
+  transition: gap 0.2s;
+}
+
+.service-link:hover { gap: 0.7rem; }
+
+/* Color accents per card */
+.card-spring .service-card-top { background: linear-gradient(135deg, #FFF5E6, #FDECD6); }
+.card-morning .service-card-top { background: linear-gradient(135deg, #EEF6EE, #DCF0DC); }
+.card-mama .service-card-top { background: linear-gradient(135deg, #F0EEF8, #E2DEEF); }
+.card-sunny .service-card-top { background: linear-gradient(135deg, #FFF8E6, #FFF0C8); }
+.card-vibes .service-card-top { background: linear-gradient(135deg, #FEEEEE, #FDDEDE); }
+
+/* ── VOICE SECTION ── */
+.voice {
+  padding: 7rem 4rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.voice-header { text-align: center; margin-bottom: 3.5rem; }
+
+.voice-header h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: var(--deep);
+  line-height: 1.3;
+}
+
+.voice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.voice-card {
+  background: white;
+  border-radius: 1.25rem;
+  padding: 2rem;
+  border: 1px solid var(--warm);
+  position: relative;
+}
+
+.voice-card::before {
+  content: '\201C';
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 4rem;
+  color: var(--warm);
+  line-height: 1;
+}
+
+.voice-stars { color: var(--gold); font-size: 0.85rem; margin-bottom: 0.75rem; }
+
+.voice-text {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.85rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  font-weight: 300;
+  margin-bottom: 1.25rem;
+}
+
+.voice-author {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.voice-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.voice-author-info h4 {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.voice-author-info p {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  margin-top: 1px;
+}
+
+/* ── FLOW SECTION ── */
+.flow {
+  padding: 7rem 4rem;
+  background: var(--deep);
+  color: white;
+}
+
+.flow-inner { max-width: 800px; margin: 0 auto; }
+
+.flow h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  color: white;
+  margin-bottom: 3rem;
+}
+
+.flow-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.flow-step {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  position: relative;
+}
+
+.flow-step:last-child { border-bottom: none; }
+
+.flow-step-num {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.flow-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--terracotta);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: white;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.flow-line {
+  width: 1px;
+  flex: 1;
+  background: rgba(255,255,255,0.1);
+  min-height: 2rem;
+}
+
+.flow-step:last-child .flow-line { display: none; }
+
+.flow-step-content h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.4rem;
+  padding-top: 0.6rem;
+}
+
+.flow-step-content p {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.9;
+  font-weight: 300;
+}
+
+/* ── CTA SECTION ── */
+.cta-section {
+  padding: 8rem 4rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, var(--sand) 0%, var(--cream) 70%);
+  z-index: 0;
+}
+
+.cta-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--deep);
+  line-height: 1.25;
+  margin-bottom: 1.25rem;
+}
+
+.cta-section h2 em {
+  font-style: italic;
+  color: var(--terracotta);
+}
+
+.cta-section p {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 0.95rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+  font-weight: 300;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn-line {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #06C755;
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.25s;
+  box-shadow: 0 4px 20px rgba(6,199,85,0.3);
+}
+
+.btn-line:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(6,199,85,0.4);
+}
+
+.btn-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: linear-gradient(135deg, #E1306C, #833AB4);
+  color: white;
+  padding: 0.9rem 2rem;
+  border-radius: 3rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.25s;
+  box-shadow: 0 4px 20px rgba(131,58,180,0.3);
+}
+
+.btn-instagram:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(131,58,180,0.4);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--deep);
+  color: rgba(255,255,255,0.5);
+  padding: 2.5rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+}
+
+.footer-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1rem;
+  color: white;
+}
+
+/* ── SCROLL ANIMATIONS ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 1rem 1.5rem; }
+  .nav-links { display: none; }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 6rem 1.5rem 3rem;
+    gap: 2.5rem;
+  }
+
+  .hero::before { display: none; }
+
+  .pain { padding: 4rem 1.5rem; }
+  .pain-grid { grid-template-columns: 1fr; gap: 1rem; }
+
+  .about { grid-template-columns: 1fr; padding: 4rem 1.5rem; gap: 3rem; }
+  .about-float { position: static; margin-top: 1rem; display: inline-block; }
+
+  .services { padding: 4rem 1.5rem; }
+  .services-grid { grid-template-columns: 1fr; }
+  .service-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+
+  .voice { padding: 4rem 1.5rem; }
+  .voice-grid { grid-template-columns: 1fr; }
+
+  .flow { padding: 4rem 1.5rem; }
+
+  .cta-section { padding: 5rem 1.5rem; }
+
+  footer { flex-direction: column; gap: 1rem; text-align: center; padding: 2rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">AKI English Life</div>
+  <ul class="nav-links">
+    <li><a href="file:///Users/user/Downloads/aki-english-lp.html#about">AKIについて</a></li>
+    <li><a href="file:///Users/user/Downloads/aki-english-lp.html#services">レッスン・講座</a></li>
+    <li><a href="file:///Users/user/Downloads/aki-english-lp.html#voice">受講者の声</a></li>
+    <li><a href="file:///Users/user/Downloads/aki-english-lp.html#flow">受講の流れ</a></li>
+    <li><a href="https://lin.ee/d6Ii2lM" class="nav-cta">LINE登録</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-eyebrow">Online English for Family</span>
+    <h1>
+      ママも子どもも、<br>
+      <em>英語の音</em>から<br>
+      変わっていく。
+    </h1>
+    <p class="hero-sub">
+      「音に特化した」オンライン英語レッスン。<br>
+      親子で一緒に英語を楽しみながら、<br>
+      本物の英語力を育てます。
+    </p>
+    <div class="hero-badges">
+      <span class="badge">🇺🇸 アメリカ留学経験</span>
+      <span class="badge">📚 英検1級（発音満点）</span>
+      <span class="badge">🎓 青山学院大学卒</span>
+      <span class="badge">✨ 講師歴15年</span>
+    </div>
+    <div class="hero-cta-group">
+      <a href="https://lin.ee/d6Ii2lM" class="btn-primary">📩 LINEで無料相談する</a>
+      <a href="file:///Users/user/Downloads/aki-english-lp.html#services" class="btn-secondary">レッスンを見る →</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="hero-card">
+      <div class="hero-card-profile">
+        <div class="profile-avatar">
+          <img src="./AKI English Life _ 親子で育てる・英語の音_files/40f1a7d8-61bf-46c1-ad92-306749551dc8.jpeg" alt="AKI先生" onerror="this.style.display=&#39;none&#39;;this.parentElement.innerHTML=&#39;👩‍🏫&#39;">
+        </div>
+        <div class="profile-info">
+          <h3>AKI 先生</h3>
+          <p>音に特化したオンライン英語講師</p>
+        </div>
+      </div>
+      <div class="hero-card-stats">
+        <div class="stat">
+          <span class="stat-num">15</span>
+          <span class="stat-label">年の<br>指導経験</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">1級</span>
+          <span class="stat-label">英検<br>保持者</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">💯</span>
+          <span class="stat-label">2次面接<br>発音満点</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-floating-tag tag-1">🎵 英語を英語で学ぶ</div>
+    <div class="hero-floating-tag tag-2">👨‍👩‍👧 親子で受講OK</div>
+  </div>
+</section>
+
+<!-- PAIN SECTION -->
+<section class="pain" id="pain">
+  <div class="pain-inner">
+    <div class="section-label">こんなお悩みはありませんか</div>
+    <h2>「子どもに英語をやらせたいけど、<br>自分の発音が心配…」</h2>
+    <div class="pain-grid">
+      <div class="pain-item fade-up" style="transition-delay: 0s;">
+        <div class="pain-num">01</div>
+        <p><strong>発音に自信がない</strong>ので子どもの前で英語を話せない。間違いを教えてしまいそうで怖い。</p>
+      </div>
+      <div class="pain-item fade-up" style="transition-delay: 0.1s;">
+        <div class="pain-num">02</div>
+        <p>英語教室に通わせているけど、<strong>親も一緒に学べる場所がない</strong>。子どもだけ伸びても家での会話が続かない。</p>
+      </div>
+      <div class="pain-item fade-up" style="transition-delay: 0.2s;">
+        <div class="pain-num">03</div>
+        <p>英語を「勉強」として嫌いになってほしくない。<strong>楽しみながら自然に身につく方法</strong>を探している。</p>
+      </div>
+    </div>
+    <div class="pain-answer fade-up">
+      <div class="pain-answer-icon">🌿</div>
+      <p>AKI English Lifeでは、<strong>ママも子どもも「一緒に」学べる環境</strong>を大切にしています。発音に自信がなくても大丈夫。音から丁寧にアプローチし、おうちで英語が自然に溢れる毎日を作ります。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about" id="about">
+  <div class="about-visual">
+    <div class="about-card-main">
+      <div class="about-name">AKI</div>
+      <div class="about-title">音に特化したオンライン英語講師</div>
+      <div class="about-tags">
+        <span class="about-tag">🇺🇸 アメリカ1年留学</span>
+        <span class="about-tag">英検1級（発音💯）</span>
+        <span class="about-tag">青山学院大学卒</span>
+        <span class="about-tag">講師歴15年目</span>
+        <span class="about-tag">2児のママ</span>
+      </div>
+      <p class="about-quote">「英語を英語で学ぶ」ことで、音が自然に体に入っていく。そんな本物の英語体験を、親子で一緒に届けたい。</p>
+    </div>
+    <div class="about-float">
+      <strong>15年</strong>
+      親子への英語指導<br>経験があります
+    </div>
+  </div>
+  <div class="about-text">
+    <div class="section-label">About AKI</div>
+    <h2>英語は「音」から<br>始まると信じています。</h2>
+    <p>高校生でアメリカへ1年留学し、英語を「音」として体で覚えた経験から、発音・リスニングに特化したレッスンスタイルを確立しました。</p>
+    <p>英検1級の2次面接では発音が満点評価。青山学院大学国際政治経済学部を卒業後、15年にわたりオンラインで親子・キッズ英語を指導しています。</p>
+    <p>2人の子どもを持つ母として、「ママが楽しそうに英語を話す姿が、子どもの一番の教材」と実感しています。だから、ママにも一緒に変わってほしいのです。</p>
+  </div>
+</section>
+
+<!-- SERVICES SECTION -->
+<section class="services" id="services">
+  <div class="services-header">
+    <div class="section-label">Lessons &amp; Courses</div>
+    <h2>あなたと子どもに<br>ぴったりの学び方を。</h2>
+    <p>単発から継続コースまで、ライフスタイルに合わせて選べます。</p>
+  </div>
+  <div class="services-grid">
+
+    <!-- Spring School (featured) -->
+    <div class="service-card card-spring featured fade-up" style="transition-delay: 0.3s;">
+      <div class="service-card-top">
+        <div>
+          <div class="service-icon">🌸</div>
+          <span class="service-tag">親子・兄弟OK</span>
+          <h3>Online<br>Spring School</h3>
+          <p>英語で「わかった！できた！」の経験ができる4DAYSのオンラインレッスン。単発で気軽に参加できます。</p>
+        </div>
+        <a href="https://drive.google.com/file/d/1VK8RpDMoSyKc7vAInqRDJKdFW_uUkg92/view?usp=drivesdk" class="service-link">詳しく見る →</a>
+      </div>
+      <div class="service-card-accent">
+        <ul class="service-points">
+          <li>英語を英語で体験できる</li>
+          <li>親子・兄弟での参加OK</li>
+          <li>4日間で確かな変化を実感</li>
+          <li>単発参加なのでお試しに最適</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Morning Club -->
+    <div class="service-card card-morning fade-up" style="transition-delay: 0.4s;">
+      <div class="service-card-top">
+        <div class="service-icon">🍳</div>
+        <span class="service-tag">週末・朝45分</span>
+        <h3>Weekend Morning<br>English Club</h3>
+        <p>英語×工作で自然に吸収。週末の朝を英語タイムに変えましょう。</p>
+        <a href="https://drive.google.com/file/d/1Z_16mHZJ-mXtZg73QbRpXl3HbZYMtJPh/view?usp=drivesdk" class="service-link">詳しく見る →</a>
+      </div>
+    </div>
+
+    <!-- Sunny Side -->
+    <div class="service-card card-sunny fade-up" style="transition-delay: 0.5s;">
+      <div class="service-card-top">
+        <div class="service-icon">☀️</div>
+        <span class="service-tag">ママ向けコミュニティ</span>
+        <h3>sunny side<br>コミュニティ</h3>
+        <p>ママたちが自分らしく英語をアウトプットできるオンラインコミュニティ。仲間と一緒に続けよう。</p>
+        <a href="https://englishlife0217.my.canva.site/sunny-side" class="service-link">詳しく見る →</a>
+      </div>
+    </div>
+
+    <!-- Private Lesson -->
+    <div class="service-card card-mama fade-up" style="transition-delay: 0.6s;">
+      <div class="service-card-top">
+        <div class="service-icon">💻</div>
+        <span class="service-tag">ママ向け・全12回</span>
+        <h3>Listening Magic<br>プライベートレッスン</h3>
+        <p>英語の「音」に自信を持つための全12回コース。発音・リスニングを徹底強化。</p>
+        <a href="https://englishlife0217.my.canva.site/listeningmagiccoursebyenglishlife" class="service-link">詳しく見る →</a>
+      </div>
+    </div>
+
+    <!-- Good Vibes -->
+    <div class="service-card card-vibes fade-up" style="transition-delay: 0.7s;">
+      <div class="service-card-top">
+        <div class="service-icon">🌙</div>
+        <span class="service-tag">2DAYS講座</span>
+        <h3>Good Vibes Club</h3>
+        <p>英語でよりPositiveな子育てを叶える2日間の講座。心も英語力も一緒に育てます。</p>
+        <a href="https://englishlife0217.my.canva.site/good-vibes-club" class="service-link">詳しく見る →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- VOICE SECTION -->
+<section class="voice" id="voice">
+  <div class="voice-header fade-up">
+    <div class="section-label" style="justify-content:center;color:var(--terracotta);">受講者の声</div>
+    <h2>「英語が、おうちの一部になった」</h2>
+  </div>
+  <div class="voice-grid">
+    <div class="voice-card fade-up" style="transition-delay: 0.8s;">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text">子どもが英語の歌を口ずさむようになりました。私自身も発音への苦手意識がなくなり、一緒に英語を楽しめています。</p>
+      <div class="voice-author">
+        <div class="voice-avatar" style="background:#FFF0E0;">👩</div>
+        <div class="voice-author-info">
+          <h4>Aさん（8歳・5歳のママ）</h4>
+          <p>Spring School 受講</p>
+        </div>
+      </div>
+    </div>
+    <div class="voice-card fade-up" style="transition-delay: 0.9s;">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text">週末の朝が楽しみになりました！工作しながら英語を聞くので、子どもが飽きずに続けられます。私も毎回新しい表現を覚えています。</p>
+      <div class="voice-author">
+        <div class="voice-avatar" style="background:#E8F4E8;">👩</div>
+        <div class="voice-author-info">
+          <h4>Kさん（6歳のママ）</h4>
+          <p>Weekend Morning Club 受講</p>
+        </div>
+      </div>
+    </div>
+    <div class="voice-card fade-up" style="transition-delay: 1s;">
+      <div class="voice-stars">★★★★★</div>
+      <p class="voice-text">英検の発音が満点というのを聞いて申し込みました。AKI先生の音へのこだわりが伝わるレッスンで、リスニングが格段に上がりました。</p>
+      <div class="voice-author">
+        <div class="voice-avatar" style="background:#EEE8F4;">👩</div>
+        <div class="voice-author-info">
+          <h4>Mさん（ママ本人）</h4>
+          <p>Listening Magic 受講</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW SECTION -->
+<section class="flow" id="flow">
+  <div class="flow-inner">
+    <div class="section-label" style="color:var(--terracotta);">How to Start</div>
+    <h2>始め方はとても簡単です。</h2>
+    <div class="flow-steps">
+      <div class="flow-step fade-up" style="transition-delay: 1.1s;">
+        <div class="flow-step-num">
+          <div class="flow-circle">1</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <h3>LINEを友だち追加する</h3>
+          <p>公式LINEに登録すると、最新のレッスン情報や無料コンテンツが届きます。まずはここから！</p>
+        </div>
+      </div>
+      <div class="flow-step fade-up" style="transition-delay: 1.2s;">
+        <div class="flow-step-num">
+          <div class="flow-circle">2</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <h3>気になるレッスンを選ぶ</h3>
+          <p>単発のSpring SchoolやWeekend Morning Clubから試すのがおすすめ。まず体験してみましょう。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-up" style="transition-delay: 1.3s;">
+        <div class="flow-step-num">
+          <div class="flow-circle">3</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <h3>LINEまたはInstagramで申し込む</h3>
+          <p>詳細ページを確認の上、LINEかInstagramのDMで気軽にご連絡ください。質問も大歓迎です。</p>
+        </div>
+      </div>
+      <div class="flow-step fade-up" style="transition-delay: 1.4s;">
+        <div class="flow-step-num">
+          <div class="flow-circle">4</div>
+          <div class="flow-line"></div>
+        </div>
+        <div class="flow-step-content">
+          <h3>親子で英語ライフをスタート！</h3>
+          <p>Zoomで繋いで、自宅から気軽に参加できます。特別な準備は不要。今日から英語が変わります。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section" id="contact">
+  <div class="cta-inner">
+    <div class="section-label" style="justify-content:center;color:var(--terracotta);">Get Started</div>
+    <h2>今日から、<br><em>親子の英語</em>を<br>変えませんか？</h2>
+    <p>まずはLINEで友だち追加するだけ。無料相談も受け付けています。お気軽にどうぞ。</p>
+    <div class="cta-buttons">
+      <a href="https://lin.ee/d6Ii2lM" class="btn-line">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"></path></svg>
+        LINEで友だち追加
+      </a>
+      <a href="https://www.instagram.com/englishlife0217/" class="btn-instagram">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+        Instagramを見る
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">AKI English Life</div>
+  <p>© 2026 AKI English Life. All rights reserved.</p>
+</footer>
+
+<script>
+// Scroll animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, 100);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Staggered fade for grid items
+document.querySelectorAll('.pain-grid .pain-item, .services-grid .service-card, .voice-grid .voice-card, .flow-steps .flow-step').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 0.1}s`;
+});
+</script>
+
+
+</body></html>
